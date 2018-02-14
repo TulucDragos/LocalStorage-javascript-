@@ -1,0 +1,74 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		!function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2022393841383090');
+  fbq('track', 'ViewContent');
+  fbq('track', 'PageView');
+
+  localStorage.setItem("var", '1');
+
+  var item = localStorage.getItem('var');
+
+  console.log(item);
+
+  var number = parseInt(item);
+
+  console.log(number);
+
+  number = number + 1;
+
+  console.log(number);
+
+  item = item + 1;
+
+  console.log(item);
+
+  localStorage.setItem('var', number);
+
+  var item = localStorage.getItem('var');
+
+  console.log(item);
+
+     
+  $(document).ready(function() {
+     $('#addToCart').click(function() {
+        fbq('track', 'AddToCart');
+   });
+
+
+  })
+      
+	</script>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+  
+   $(document).ready(function(){
+    $('#finalizeazaComanda').click(function() {
+    fbq('track', 'Purchase', {
+      currency: 'RON' 
+    });  
+  });
+  })
+
+</script>
+
+	<button id='finalizeazaComanda'>Click me !</button>
+
+  <a href="#" class="Button" id="addToCart"> trortortorotrotrot</a>
+
+</body>
+
+
+</html>
